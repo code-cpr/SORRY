@@ -27,3 +27,13 @@ document.querySelectorAll('.next-btn').forEach(btn => {
 
 showCard(currentIndex);
 interval = setInterval(rotateCards, 5000);
+
+const enterBtn = document.getElementById('enter-btn');
+const entryScreen = document.getElementById('entry-screen');
+
+enterBtn.addEventListener('click', () => {
+  entryScreen.style.display = 'none';
+  audio.play().catch(() => {
+    console.log("Autoplay blocked. User must interact with the audio.");
+  });
+});
