@@ -25,6 +25,14 @@ document.querySelectorAll('.next-btn').forEach(btn => {
   });
 });
 
+function ensureAudioPlaying() {
+  if (audio.paused) {
+    audio.play().catch(() => {
+      setTimeout(ensureAudioPlaying, 1000); // retry every second
+    });
+  }
+}
+
 showCard(currentIndex);
 interval = setInterval(rotateCards, 5000);
 
