@@ -184,3 +184,47 @@ h1 {
 .music-player audio {
   width: 140px;
 }
+
+.entry-screen {
+  position: fixed;
+  z-index: 9999;
+  background: linear-gradient(to bottom right, #fff0f5, #ffe3ec);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.entry-content h1 {
+  font-size: 2.5rem;
+  color: #e91e63;
+  margin-bottom: 20px;
+}
+
+.entry-content p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+#enter-btn {
+  font-size: 1.2rem;
+  background-color: #e91e63;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#enter-btn:hover {
+  background-color: #d81b60;
+}
